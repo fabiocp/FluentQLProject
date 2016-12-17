@@ -1,5 +1,5 @@
 # FluentQLProject
-Utilitário para geração de expressões lógicas para linguagens de consulta. 
+Utilitário para geração de expressões lógicas. 
 O objetivo é oferecer uma sintaxe fluente e simples para escrever as expressões e traduzí-las para várias linguagens de consulta diferentes. 
 
 ```c#
