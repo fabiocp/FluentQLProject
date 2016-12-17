@@ -1,5 +1,5 @@
 # FluentQLProject
-O objetivo é desenvolver uma ferramenta que gere expressões lógicas para linguagens de consulta de bancos de dados (não apenas SQL), permitindo escrever expressões de forma simples e fluente.
+Projeto de um utilitário para geração expressões lógicas para diversas liguagens de consulta.
 
 
 ```c#
