@@ -5,21 +5,23 @@ O objetivo é oferecer uma sintaxe fluente e simples para escrever as expressõe
 
 ```c#
 [TestMethod]
-public void TestComExpressaoInterna() {
+public void TestCompleto() {
 
     var expressao = new QLExpr("nome", QLOperation.Contem, "fab")
-        .And(
-            new QLExpr("filtroidade", QLOperation.MaiorIgual, 5)
-                .Or("filtroid", QLOperation.Igual, 7));
+        .And(new QLExpr("filtrovalor", QLOperation.MaiorIgual, 5.2).Or("filtrofixo=2"))
+        .And("filtroCustomizado", 1);
 
-    var filterList = new FiltersBuilder()
-        .RegistrarFiltroNumerico("filtroid", "id")
-        .RegistrarFiltroNumerico("filtroidade", "idade")
-        .RegistrarFiltroTexto("nome").FiltroDefinicaoList;
 
-    new SqlBuilder(expressao, filterList, new FirebirdFabricaFiltros())
-        .Gerar()
-        .ShouldEqual("(nome like '%fab%') and ((idade >= 5) or (id = 7))");
+    expressao
+        .Rename("filtrovalor", "valor")
+        .DefinirExpressaoCustom<int>("filtroCustomizado", valor =>
+            "exists(select 1 from estudante e where e.idpessoa=" + valor.ToString() + ")");
+
+    new FirebirdFluentQLBuilder()
+        .Gerar(expressao)
+        .ShouldEqual("(nome like '%fab%') and ((valor >= 5.2) or (filtrofixo=2)) and (exists(select 1 from estudante e where e.idpessoa=1))");
 
 }
+
+
 ```
