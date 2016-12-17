@@ -6,9 +6,14 @@ using System.Text;
 
 namespace FluentQL.CoreSQL {
     public class SqlDefaultTextoFiltroGerador : IFiltroGerador{
-        public string Gerar(FiltroDefinicao filtroDefinicao, QLExpr qlExpr) {
+
+        private readonly SqlDefaultMontadorValor montadorValor;
+        public SqlDefaultTextoFiltroGerador(SqlDefaultMontadorValor montadorValor) {
+            this.montadorValor = montadorValor;
+        }
+        public string Gerar(QLExpr qlExpr) {
             switch (qlExpr.Operacao) {
-                case QLOperation.Contem: return filtroDefinicao.Campo + " like '%"+qlExpr.Valor.ToString()+"%'";
+                case QLOperation.Contem: return qlExpr.NomeFiltro + " like '%" + qlExpr.Valor.ToString() + "%'";
                 default: return null;
             }
         }

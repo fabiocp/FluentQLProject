@@ -6,11 +6,13 @@ using System.Text;
 namespace FluentQL.Core {
     public abstract class FabricaFiltro {
 
-        public string Gerar(FiltroDefinicao filtroDefinicao, QLExpr qlExpr){
-            return GetFiltroGerador(filtroDefinicao, qlExpr).Gerar(filtroDefinicao, qlExpr);
+        public string Gerar(QLExpr qlExpr){
+            return GetFiltroGerador(qlExpr).Gerar(qlExpr);
         }
 
-        public abstract IFiltroGerador GetFiltroGerador(FiltroDefinicao filtroDefinicao, QLExpr qlExpr);
+        public abstract IFiltroGerador GetFiltroGerador(QLExpr qlExpr);
+
+         
 
     }
 }

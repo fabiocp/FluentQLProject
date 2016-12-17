@@ -4,21 +4,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FluentQL.CoreSQL;
 
 namespace FluentQL.CoreSQL {
     public class SqlDefaultFabricaFiltro: FabricaFiltro {
 
-        public override IFiltroGerador GetFiltroGerador(FiltroDefinicao filtroDefinicao, QLExpr qlExpr) {
+        public override IFiltroGerador GetFiltroGerador(QLExpr qlExpr) {
 
-            if (filtroDefinicao is NumericoFiltroDefinicao) {
-                return new SqlDefaultNumericoFiltroGerador();
+            var montadorValor = GetMontadorValor();
+
+            if (montadorValor.EhInteiro(qlExpr.Valor) || montadorValor.EhValor(qlExpr.Valor)) {
+                return new SqlDefaultNumericoFiltroGerador(montadorValor);
             }
 
-            if (filtroDefinicao is TextoFiltroDefinicao) {
-                return new SqlDefaultTextoFiltroGerador();
+            if (montadorValor.EhData(qlExpr.Valor)) {
+                return new SqlDefaultDataFiltroGerador(montadorValor);
             }
 
-            return null;
+            return new SqlDefaultTextoFiltroGerador(montadorValor);
         }
+
+        protected virtual SqlDefaultMontadorValor GetMontadorValor() {
+            return new SqlDefaultMontadorValor(); 
+        }
+
+        
     }
 }

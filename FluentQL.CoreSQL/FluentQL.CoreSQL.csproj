@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FluentQL.CoreSQL</RootNamespace>
     <AssemblyName>FluentQL.CoreSQL</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,7 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extensoes.cs" />
+    <Compile Include="SqlDefaultDataFiltroGerador.cs" />
+    <Compile Include="SqlDefaultMontadorValor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlBuilder.cs" />
     <Compile Include="SqlDefaultFabricaFiltro.cs" />

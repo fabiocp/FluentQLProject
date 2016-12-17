@@ -9,7 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentQL.CoreSQL", "FluentQ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentQL.Firebird", "FluentQL.Firebird\FluentQL.Firebird.csproj", "{B1AA5871-7307-407E-9DA5-3741D6B9FC9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentQL.Tests", "FluentQL.Tests\FluentQL.Tests.csproj", "{D6001EB1-1D8D-4C04-B640-CE9913F9C5AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentQL.Extensions", "FluentQL.Extensions\FluentQL.Extensions.csproj", "{C2386080-5159-4005-A63D-A4CBD751C25A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentQL.Firebird.Tests", "FluentQL.Firebird.Tests\FluentQL.Firebird.Tests.csproj", "{9A193D3D-DF2E-4F2E-AA12-71EB062FE61B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +31,14 @@ Global
 		{B1AA5871-7307-407E-9DA5-3741D6B9FC9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1AA5871-7307-407E-9DA5-3741D6B9FC9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1AA5871-7307-407E-9DA5-3741D6B9FC9B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D6001EB1-1D8D-4C04-B640-CE9913F9C5AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D6001EB1-1D8D-4C04-B640-CE9913F9C5AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D6001EB1-1D8D-4C04-B640-CE9913F9C5AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D6001EB1-1D8D-4C04-B640-CE9913F9C5AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2386080-5159-4005-A63D-A4CBD751C25A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2386080-5159-4005-A63D-A4CBD751C25A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2386080-5159-4005-A63D-A4CBD751C25A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2386080-5159-4005-A63D-A4CBD751C25A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A193D3D-DF2E-4F2E-AA12-71EB062FE61B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A193D3D-DF2E-4F2E-AA12-71EB062FE61B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A193D3D-DF2E-4F2E-AA12-71EB062FE61B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A193D3D-DF2E-4F2E-AA12-71EB062FE61B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,22 +5,14 @@ using System.Linq;
 using System.Text;
 
 namespace FluentQL.CoreSQL {
-    public class SqlBuilder {
+    public class SqlBuilder : IBuilder {
 
-        private readonly QLExpr qlExpr;
-        private readonly IEnumerable<FiltroDefinicao> filtroDefinicaoList;
         private readonly FabricaFiltro fabricaFiltro;
-        public SqlBuilder(QLExpr qlExpr, IEnumerable<FiltroDefinicao> filtroDefinicaoList, FabricaFiltro fabricaFiltro) {
-            this.qlExpr = qlExpr;
-            this.filtroDefinicaoList = filtroDefinicaoList;
+        public SqlBuilder(FabricaFiltro fabricaFiltro) {
             this.fabricaFiltro = fabricaFiltro;
         }
 
-        public string Gerar() {
-            return Gerar(this.qlExpr);
-        }
-
-        private string Gerar(QLExpr qlExprParam) {
+        public string Gerar(QLExpr qlExprParam) {
             var str = "";
             var expr = qlExprParam;
             while (expr != null) {
@@ -43,11 +35,7 @@ namespace FluentQL.CoreSQL {
             if (!string.IsNullOrEmpty(qlExprParam.ExprCustomizada))
                 return qlExprParam.ExprCustomizada;
 
-            var filtroDefinicao = filtroDefinicaoList.FirstOrDefault(f => f.NomeFiltro == qlExprParam.NomeFiltro);
-            if (filtroDefinicao != null) 
-                return fabricaFiltro.Gerar(filtroDefinicao, qlExprParam);
-
-            return "";
+            return fabricaFiltro.Gerar(qlExprParam);
         }
 
 

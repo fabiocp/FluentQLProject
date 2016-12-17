@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("FluentQL.Tests")]
+[assembly: AssemblyTitle("FluentQL.Extensions")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("FluentQL.Tests")]
+[assembly: AssemblyProduct("FluentQL.Extensions")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("6dc43d3d-08cb-4a62-8049-18c6ea497ca6")]
+[assembly: Guid("c25a6daf-5007-4d9e-9493-d64d5006a09f")]
 
 // Version information for an assembly consists of the following four values:
 //
