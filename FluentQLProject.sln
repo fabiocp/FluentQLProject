@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentQL.Core", "FluentQLProject.FluentQL\FluentQL.Core.csproj", "{40ED58E9-4EC4-4C8C-92B7-71DC1C665EB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentQL.Tests", "FluentQL.Tests\FluentQL.Tests.csproj", "{E4BBCE63-B198-4965-B5C1-9B8C42A88C0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentQL.Firebird", "FluentQL.Firebird\FluentQL.Firebird.csproj", "{B6CC1AFA-1B6B-4435-901B-600349D5B26D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentQL.CoreSQL", "FluentQL.CoreSQL\FluentQL.CoreSQL.csproj", "{84B6040C-FC88-4F65-9F0F-15ADA92C39A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40ED58E9-4EC4-4C8C-92B7-71DC1C665EB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40ED58E9-4EC4-4C8C-92B7-71DC1C665EB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40ED58E9-4EC4-4C8C-92B7-71DC1C665EB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40ED58E9-4EC4-4C8C-92B7-71DC1C665EB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4BBCE63-B198-4965-B5C1-9B8C42A88C0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4BBCE63-B198-4965-B5C1-9B8C42A88C0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4BBCE63-B198-4965-B5C1-9B8C42A88C0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4BBCE63-B198-4965-B5C1-9B8C42A88C0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6CC1AFA-1B6B-4435-901B-600349D5B26D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6CC1AFA-1B6B-4435-901B-600349D5B26D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6CC1AFA-1B6B-4435-901B-600349D5B26D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6CC1AFA-1B6B-4435-901B-600349D5B26D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84B6040C-FC88-4F65-9F0F-15ADA92C39A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84B6040C-FC88-4F65-9F0F-15ADA92C39A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84B6040C-FC88-4F65-9F0F-15ADA92C39A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84B6040C-FC88-4F65-9F0F-15ADA92C39A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
