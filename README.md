@@ -2,7 +2,8 @@
 O objetivo é desenvolver uma ferramenta que gere expressões lógicas para linguagens de consulta de bancos de dados (não apenas SQL), permitindo escrever expressões de forma simples e fluente.
 
 
-```[TestMethod]
+```c#
+[TestMethod]
 public void TestComExpressaoInterna() {
 
     var expressao = new QLExpr("nome", QLOperation.Contem, "fab")
