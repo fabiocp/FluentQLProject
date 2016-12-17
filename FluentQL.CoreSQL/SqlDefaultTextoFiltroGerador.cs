@@ -13,7 +13,11 @@ namespace FluentQL.CoreSQL {
         }
         public string Gerar(QLExpr qlExpr) {
             switch (qlExpr.Operacao) {
-                case QLOperation.Contem: return qlExpr.NomeFiltro + " like '%" + qlExpr.Valor.ToString() + "%'";
+                case QLOperation.Igual: return montadorValor.MontarExpressaoPadrao(qlExpr, "=", "'{valor}'");
+                case QLOperation.Contem: return montadorValor.MontarExpressaoPadrao(qlExpr, "like", "'%{valor}%'");
+                case QLOperation.Diferente: return montadorValor.MontarExpressaoPadrao(qlExpr, "<>", "'{valor}'");
+                case QLOperation.ComecaCom: return montadorValor.MontarExpressaoPadrao(qlExpr, "like", "'%{valor}'");
+                case QLOperation.TerminaCom: return montadorValor.MontarExpressaoPadrao(qlExpr, "like", "'{valor}%'");
                 default: return null;
             }
         }

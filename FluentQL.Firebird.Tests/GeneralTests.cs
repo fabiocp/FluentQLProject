@@ -118,14 +118,48 @@ namespace FluentQL.Firebird.Tests {
                 .DefinirExpressaoCustom<int>("filtroCustomizado", valor =>
                     "exists(select 1 from estudante e where e.idpessoa=" + valor.ToString() + ")");
 
-            new FirebirdFluentQLBuilder()
-                .Gerar(expressao)
+            new FirebirdFluentQLBuilder().Gerar(expressao)
                 .ShouldEqual("(nome like '%fab%') and ((valor >= 5.2) or (filtrofixo=2)) and (exists(select 1 from estudante e where e.idpessoa=1))");
-
-            
 
         }
 
+
+        [TestMethod]
+        public void TestData() {
+            var expressao = new QLExpr("data", QLOperation.Menor, DateTime.ParseExact("14/06/2019", "dd/MM/yyyy", null));
+            new FirebirdFluentQLBuilder().Gerar(expressao)
+                .ShouldEqual("(data < '2019-06-14')");
+        }
+
+
+        [TestMethod]
+        public void TestDataEntre() {
+            var expressao = new QLExpr("data", QLOperation.Entre, new DateTime[] { DateTime.ParseExact("14/06/2019", "dd/MM/yyyy", null), DateTime.ParseExact("15/06/2019", "dd/MM/yyyy", null) });
+            new FirebirdFluentQLBuilder().Gerar(expressao)
+                .ShouldEqual("(data >= '2019-06-14' and data < '2019-06-16')");
+        }
+
+
+        [TestMethod]
+        public void TestBooleano() {
+            var expressao = new QLExpr("baixado", QLOperation.Igual, true);
+            new FirebirdFluentQLBuilder().Gerar(expressao)
+                .ShouldEqual("(baixado = 1)");
+        }
+
+        [TestMethod]
+        public void TestInteiroEntre() {
+            var expressao = new QLExpr("id", QLOperation.Entre, new int[]{1,2,3});
+            new FirebirdFluentQLBuilder().Gerar(expressao)
+                .ShouldEqual("(id in (1,2,3))");
+        }
+
+        [TestMethod]
+        public void TestValorEntre() {
+            var expressao = new QLExpr("id", QLOperation.Entre, new Double[] { 1.1, 2.2, 3.1 });
+            new FirebirdFluentQLBuilder().Gerar(expressao)
+                .ShouldEqual("(id in (1.1,2.2,3.1))");
+        }
 
     }
 }

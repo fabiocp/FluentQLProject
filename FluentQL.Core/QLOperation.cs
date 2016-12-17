@@ -8,7 +8,14 @@ namespace FluentQL.Core {
 
         Igual,
         Contem,
-        MaiorIgual
-
+        Maior,
+        MaiorIgual,
+        Menor,
+        MenorIgual,
+        Diferente,
+        ComecaCom,
+        TerminaCom,
+        IgualIgnoreCase,
+        Entre
     }
 }

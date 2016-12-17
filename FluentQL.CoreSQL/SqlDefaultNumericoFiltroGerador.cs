@@ -14,9 +14,13 @@ namespace FluentQL.CoreSQL {
         public string Gerar(QLExpr qlExpr) {
 
             switch (qlExpr.Operacao) {
-                case QLOperation.Contem: return qlExpr.NomeFiltro + " in (" + montadorValor.MontarValor(qlExpr.Valor) + ")";
-                case QLOperation.Igual: return qlExpr.NomeFiltro + " = " + montadorValor.MontarValor(qlExpr.Valor);
-                case QLOperation.MaiorIgual: return qlExpr.NomeFiltro + " >= " + montadorValor.MontarValor(qlExpr.Valor);
+                case QLOperation.Igual: return montadorValor.MontarExpressaoPadrao(qlExpr, "=");
+                case QLOperation.Entre: return montadorValor.MontarExpressaoPadrao(qlExpr, "in", "({valor})");
+                case QLOperation.Maior: return montadorValor.MontarExpressaoPadrao(qlExpr, ">");
+                case QLOperation.MaiorIgual: return montadorValor.MontarExpressaoPadrao(qlExpr, ">=");
+                case QLOperation.Menor: return montadorValor.MontarExpressaoPadrao(qlExpr, "<");
+                case QLOperation.MenorIgual: return montadorValor.MontarExpressaoPadrao(qlExpr, "<=");
+                case QLOperation.Diferente: return montadorValor.MontarExpressaoPadrao(qlExpr, "<>");
             }
 
             return null;

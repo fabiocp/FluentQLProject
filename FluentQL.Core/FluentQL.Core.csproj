@@ -41,17 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FabricaFiltro.cs" />
-    <Compile Include="FiltersBuilder.cs" />
-    <Compile Include="FiltroDefinicao.cs" />
     <Compile Include="FluentQLBuilder.cs" />
     <Compile Include="IBuilder.cs" />
     <Compile Include="IFiltroGerador.cs" />
-    <Compile Include="NumericoFiltroDefinicao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLExpr.cs" />
     <Compile Include="QLOperadorLogico.cs" />
     <Compile Include="QLOperation.cs" />
-    <Compile Include="TextoFiltroDefinicao.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

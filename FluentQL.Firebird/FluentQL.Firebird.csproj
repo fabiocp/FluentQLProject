@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="FirebirdFabricaFiltros.cs" />
     <Compile Include="FirebirdFluentQLBuilder.cs" />
+    <Compile Include="FirebirdMontadorValor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

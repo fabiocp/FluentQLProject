@@ -21,6 +21,10 @@ namespace FluentQL.CoreSQL {
                 return new SqlDefaultDataFiltroGerador(montadorValor);
             }
 
+            if (montadorValor.EhBooleano(qlExpr.Valor)) {
+                return new SqlDefaultBooleanoFiltroGerador(montadorValor);
+            }
+
             return new SqlDefaultTextoFiltroGerador(montadorValor);
         }
 

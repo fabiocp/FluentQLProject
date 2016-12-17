@@ -15,12 +15,12 @@ namespace FluentQL.CoreSQL {
             return MontarValor(qlExpr.Valor);
         }
 
-        public string MontarValor(object valor) {
+        public virtual string MontarValor(object valor) {
             if (valor is Array)
                 return string.Join(",", (ToObjectArray(valor as Array)).Select(value => MontarValor(value)));
 
             if (EhBooleano(valor)) {
-                return valor.ToString();
+                return valor.ToString().ToLower();
             }
 
             if (EhValor(valor))
@@ -69,6 +69,10 @@ namespace FluentQL.CoreSQL {
 
         public bool EhBooleano(object valor) {
             return valor is bool;
+        }
+
+        public string MontarExpressaoPadrao(QLExpr qlExpr, string operacao, string template = "{valor}") {
+            return qlExpr.NomeFiltro + " "+operacao+" " + template.Replace("{valor}", MontarValor(qlExpr.Valor));
         }
 
     }
