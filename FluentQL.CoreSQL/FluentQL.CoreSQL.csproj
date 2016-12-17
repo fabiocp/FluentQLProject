@@ -47,6 +47,7 @@
     <Compile Include="SqlBuilder.cs" />
     <Compile Include="SqlDefaultFabricaFiltro.cs" />
     <Compile Include="SqlDefaultNumericoFiltroGerador.cs" />
+    <Compile Include="SqlDefaultQLBuilder.cs" />
     <Compile Include="SqlDefaultTextoFiltroGerador.cs" />
   </ItemGroup>
   <ItemGroup>
