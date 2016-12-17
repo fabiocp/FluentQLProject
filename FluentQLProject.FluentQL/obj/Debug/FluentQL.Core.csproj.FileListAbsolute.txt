@@ -1,5 +1,0 @@
-d:\Dados\projetos\csharp\FluentQLProject\FluentQLProject.FluentQL\bin\Debug\FluentQLProject.FluentQL.dll
-d:\Dados\projetos\csharp\FluentQLProject\FluentQLProject.FluentQL\bin\Debug\FluentQLProject.FluentQL.pdb
-d:\Dados\projetos\csharp\FluentQLProject\FluentQLProject.FluentQL\obj\Debug\FluentQL.Core.csprojResolveAssemblyReference.cache
-d:\Dados\projetos\csharp\FluentQLProject\FluentQLProject.FluentQL\obj\Debug\FluentQLProject.FluentQL.dll
-d:\Dados\projetos\csharp\FluentQLProject\FluentQLProject.FluentQL\obj\Debug\FluentQLProject.FluentQL.pdb
